@@ -21,6 +21,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from 'src/environments/environment';
 import { Dialog } from './dialog/dialog';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { Dialog } from './dialog/dialog';
     MatDialogModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    CKEditorModule,
   ],
   providers: [],
   entryComponents: [],

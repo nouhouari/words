@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-itemform',
@@ -7,6 +8,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./itemform.component.scss']
 })
 export class ItemformComponent implements OnInit {
+
+  public Editor = ClassicEditor;  
 
   @Output()
   private cancel: EventEmitter<any> = new EventEmitter();

@@ -8,6 +8,7 @@ import {
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Dialog } from '../dialog/dialog';
 import { Word } from '../model';
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 @Component({
   selector: 'app-item',
@@ -15,6 +16,9 @@ import { Word } from '../model';
   styleUrls: ['./item.component.scss'],
 })
 export class ItemComponent implements OnInit {
+
+  public Editor = ClassicEditor;
+
   @Input()
   word: Word;
 
@@ -34,6 +38,7 @@ export class ItemComponent implements OnInit {
       text: new FormControl(this.word.text, [Validators.required]),
       comment: new FormControl(this.word.comment),
     });
+    // this.Editor.
   }
 
   onDelete() {

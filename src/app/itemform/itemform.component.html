@@ -3,10 +3,7 @@
     <mat-card-header></mat-card-header>
     <mat-card-content>
       <form [formGroup]="wordForm">
-          <mat-form-field>
-              <mat-label>Texte</mat-label>
-              <textarea matInput formControlName="text" required></textarea>
-          </mat-form-field>
+          <ckeditor [editor]="Editor" formControlName="text" required></ckeditor>
           <mat-form-field>
             <mat-label>Commentaire</mat-label>
             <textarea matInput formControlName="comment"></textarea>

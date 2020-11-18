@@ -1,8 +1,7 @@
 <mat-card style="margin: 2em; padding: 2em">
   <mat-card-content>
     <div *ngIf="!editMode">
-      <p>
-        {{ word.text }}
+      <p [innerHTML]="word.text">
       </p>
       <br />
       <div *ngIf="word.comment">

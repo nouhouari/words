@@ -1,0 +1,5 @@
+<div fxLayout="column" fxLayoutGap="10px">
+    <button mat-button class="mt-2" color="primary" fxFlexAlign="end" (click)="addNew()" mat-mini-fab color="primary"><mat-icon>add</mat-icon></button>
+    <app-itemform *ngIf="add" (cancel)="onCancelAdd()" (add)="onAdd($event)"></app-itemform>
+    <app-item *ngFor="let w of words | async" [word]="w" (delete)="onDelete($event)" (save)="onSave($event)"></app-item>
+</div>
